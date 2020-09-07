@@ -1,0 +1,154 @@
+// ------------------------------------------------------------
+// Animations
+// ------------------------------------------------------------
+
+@mixin fade() {
+  opacity: 0;
+  transform: translate3d(0,0,0);
+  transition: opacity linear 1s, transform ease-in 0.5s;
+}
+
+@mixin drop() {
+  opacity: 0;
+  transform: translate3d(0,-30px,0);
+  transition: opacity linear 1s, transform ease-in 1s;
+}
+
+@mixin rise() {
+  opacity: 0;
+  transform: translate3d(0,30px,0);
+  transition: opacity linear 1s, transform ease-in 0.7s;
+}
+
+@mixin reset-fade() {
+  opacity: 1;
+}
+
+@mixin reset() {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+@mixin delay-children() {
+  &:nth-child(1)  {transition-delay: 0.2s;}
+  &:nth-child(2)  {transition-delay: 0.4s;}
+  &:nth-child(3)  {transition-delay: 0.6s;}
+  &:nth-child(4)  {transition-delay: 0.8s;}
+  &:nth-child(5)  {transition-delay: 1.0s;}
+  &:nth-child(6)  {transition-delay: 1.2s;}
+  &:nth-child(7)  {transition-delay: 1.4s;}
+  &:nth-child(8)  {transition-delay: 1.6s;}
+  &:nth-child(9)  {transition-delay: 1.8s;}
+  &:nth-child(10) {transition-delay: 2.0s;}
+  &:nth-child(11) {transition-delay: 2.2s;}
+  &:nth-child(12) {transition-delay: 2.4s;}
+}
+
+header {
+  .logo {
+    @include fade();
+  }
+  &.visible {
+    .logo {
+      @include reset-fade();
+    }
+  }
+}
+
+section.hero {
+  @include fade();
+  h1 {
+    @include fade();
+    transition-delay: 0.5s;
+  }
+  a.button {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s linear 1s, background ease .5s;
+    -moz-transition: opacity 0.5s linear 1s, background ease .5s;
+    -o-transition: opacity 0.5s linear 1s, background ease .5s;
+    transition: opacity 0.5s linear 1s, background ease .5s;
+  }
+  &.visible {
+    @include reset-fade();
+    h1, a.button {
+      @include reset();
+    }
+  }
+}
+
+.what, .why, .who {
+  @include fade();
+  h2, h3 {
+    @include rise();
+  }
+  .icon {
+    @include rise();
+  }
+  &.visible {
+    @include reset-fade();
+    h2, h3 {
+      @include reset();
+    }
+    .icon {
+      @include reset();
+      @include delay-children();
+    }
+  }
+}
+
+.teams {
+  h3 {
+    @include rise();
+    &.visible {
+      @include reset();
+    }
+  }
+  article {
+    @include fade();
+    &.visible {
+      @include reset();
+    }
+  }
+}
+
+
+section.post {
+  @include fade();
+  &.visible {
+    @include reset();
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+  100% {
+    transform: translate3d(0,0,0);
+  }
+}
+
+
+@keyframes fadeInAndDrop {
+  0% { opacity: 0; transform: translate3d(0,-60%,0); }
+  50% { opacity: 0; transform: translate3d(0,-60%,0); }
+  100% { opacity: 1; transform: translate3d(0,-50%,0); }
+}
+
+@keyframes bgZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes opacity {
+	to {
+		opacity: 1;
+	}
+}

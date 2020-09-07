@@ -1,0 +1,95 @@
+// Findings
+
+section.findings {
+  padding: $padding-half 0 0 0;
+  .intro {
+    text-align: center;
+    padding-bottom: $padding-half;
+    color: $green;
+    h2 {
+      font-weight: $light;
+      color: $green;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+  }
+  .main_content {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: row;
+  }
+  article {
+    min-height: 200px;
+    margin-bottom: 40px;
+    &:nth-child(3n+1) {
+      margin-left: 0;
+      clear: left;
+    }
+    .content {
+      overflow: hidden;
+      padding: 20px;
+      color: $white;
+      .week {
+        text-shadow: 1px 1px 2px black; 
+        font-weight: $bold;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .new {
+        display: none;
+        background: #25af00;
+        padding: 3px 5px;
+        @include border-radius(5px);
+        font: $bold 1rem/1.4rem $regular;
+        text-transform: uppercase;
+        margin-left: 5px;
+        text-shadow: none; 
+      }
+      h3 {
+        text-shadow: 1px 1px 2px black; 
+        color: $white;
+        font: $light 2.0rem/2.4rem $regular;
+        padding-right: 0px;
+        @media (min-width: $breakpoint-desktop) {
+          padding-right: 120px;
+        }
+      }
+    }
+    &:nth-child(1) {
+      .content {
+        .new {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.week_number {
+  color: $green;
+  font: $bold 2.2rem/2.8rem $regular;
+  text-transform: uppercase;
+}
+
+.downloads {
+  margin-top: 20px;
+}
+
+section.papers {
+  padding: $padding-half 0;
+  background: #f9f9f9;
+  .intro {
+    text-align: center;
+    padding-bottom: $padding-half;
+    color: #636363;
+    h2 {
+      font-weight: $light;
+      color: #636363;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+  }
+}

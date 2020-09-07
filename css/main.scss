@@ -1,0 +1,18 @@
+// main.scss
+@import 'base/skeleton'; // CSS Skeleton
+@import 'base/reset'; // CSS Resets
+@import 'base/fonts'; // Fonts
+@import 'base/mixins'; // Mixins
+@import 'base/general'; // General styles
+@import 'base/buttons'; // Buttons
+@import 'base/animations'; // Animations
+
+// Modules
+@import 'modules/header'; // Header
+@import 'modules/footer'; // Footer
+
+// Pages
+@import 'pages/home'; // Home
+@import 'pages/about'; // About
+@import 'pages/news'; // News
+@import 'pages/findings'; // Findings

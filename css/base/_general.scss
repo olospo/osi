@@ -1,0 +1,598 @@
+// Avenir
+$regular: 'Nunito', Helvetica, Arial, sans-serif;
+
+// Weights
+$light: 200;
+$normal: 400;
+$bold: 700;
+$dark: 900;
+
+// Colours
+$white: #fff;
+$black: #2d2d2d;
+
+$green: #036063;
+$pink: #A7165E;
+
+// Shades
+$darkgreen: #006f74;
+
+// Breakpoints
+$breakpoint-mobile: 400px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 900px;
+$breakpoint-desktop: 1200px;
+
+// Padding
+$padding: 80px;
+$padding-half: 40px;
+$padding-quarter: 20px;
+
+::selection {
+  color: $white;
+  background: #17989d !important;
+  text-shadow: none !important;
+}
+    
+::-moz-selection {
+  color: $white;
+  background: #17989d;
+  text-shadow: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto; 
+}
+
+p {
+  font: $normal 1.8rem/2.8rem $regular;
+  margin-bottom: 27px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+html { // 1.5rem = 15px
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body { 
+  font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.8;
+  font-family: $regular;
+  font-weight: $light;
+  color: $black;
+  -webkit-font-smoothing: antialiased; // Fix fonts looking rubbish in Chrome
+  background: $white;
+  letter-spacing: 0.2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: $regular;
+  font-kerning: normal;
+  color: $black;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .flex {
+    display: flex;
+    flex-flow: column;
+    aside {
+      order: 2;
+      margin-top: $padding-half;
+    }
+    .content {
+      order: 1;
+    }
+  }
+}
+
+// Page 
+section {
+  &.page, &.post {
+    padding: $padding-half 0px;
+    font: $normal 2rem/3.6rem $regular;
+    font-size: 2rem;
+    line-height: 3.6rem;
+    @media (min-width: $breakpoint-tablet) {
+      font: $normal 2.6rem/4rem $regular;
+      font-size: 2.6rem;
+      line-height: 4rem;
+    }
+    article.profile {
+      margin-bottom: $padding;
+      img {
+        margin-top: $padding-quarter;
+      }
+      &:nth-child(3n+4) {
+        margin-left: 0;
+        clear: left;
+      }
+    }
+    &.no_hero {
+      padding: $padding-half 0px;
+      @media (min-width: $breakpoint-tablet) {
+        padding: $padding 0px;
+      }
+    }
+
+  }
+  h1, h2, h3 {
+    font-family: $regular;
+  }
+  h1 {
+    font: $bold 3.6rem/5rem $regular;
+    margin-bottom: 0.5em;
+    font-size: 3.6rem;
+  }
+  h2 {
+    font: $bold 2.8rem/3.8rem $regular;
+    margin-bottom: 0.5em;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    &.center {
+      font-weight: $light;
+      color: $green;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+  h3 {
+    font: $bold 2.2rem/3.0rem $regular;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+  }
+  h4 {
+    font: $bold 2rem/2.8rem $regular;
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  h5 {
+    font: $bold 1.8rem/2.6rem $regular;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+  }
+  b, strong {
+    font-weight: bold;
+  }
+  em, i {
+    font-style: italic;
+  }
+  a {
+    color: $green;
+    text-decoration: underline;
+    text-decoration-color: $green;
+    &:hover {
+      color: $pink;
+      text-decoration-color: $pink;
+    }
+    &.read_more{
+      margin: 5px 0;
+      display: inline-block;
+      font: $normal 2.0rem/3.2rem $regular;
+      content: "";
+      background: $white url('../img/blue_arrow.svg') right center no-repeat;
+      padding-right: 20px;
+      -webkit-transition: all ease .5s;
+      -moz-transition: all ease .5s;
+      -o-transition: all ease .5s;
+      transition: all ease .5s;
+      &:hover {
+        background: $white url('../img/blue_arrow.svg') right 4px center no-repeat;
+      }
+    }
+  }
+  ul {
+    font: $normal 1.8rem/2.8rem $regular;
+    margin: 20px 0px 20px 20px;
+    li {
+      list-style: disc;
+      list-style-position: outside;
+      margin-left: 20px;
+    }
+    ul {
+      margin: 10px 0px;
+    }
+  }
+  ol {
+    font: $normal 1.8rem/2.8rem $regular;
+    margin: 20px 0px 20px 20px;
+    li {
+      list-style: decimal;
+      list-style-position: outside;
+      margin-left: 20px;
+    }
+  }
+  table {
+    border: 1px solid $black;
+    @include border-radius(10px);
+    overflow-x: scroll;
+    font: $normal 1.8rem/2.6rem $regular;
+    width:100%;
+    table-layout: auto;
+    border-collapse: separate !important;
+
+    th {
+      color: $green;
+      font: $bold 2.0rem/2.6rem $regular;
+      padding: 20px;
+      background: $white;
+      text-transform: uppercase;
+    }
+    thead {
+      background: $white;
+      th {
+        color: $green;
+        font: $bold 2.0rem/2.6rem $regular;
+        padding: 20px;
+        border: none;
+      }
+    }
+
+    tr {
+      td {
+        padding: 20px;
+        border-left: 1px solid $black;
+        vertical-align: middle;
+        &:first-child {
+          border-left: none;
+        }
+      }
+      &:last-child {
+        td {
+          background: $white;
+          vertical-align: middle;
+        }
+      }
+      &:first-child {
+        td {
+          background: $white;
+        }
+      }
+    }
+  }
+  blockquote {
+    margin-bottom: 20px;
+    border-left: 10px solid $green;
+    color: $green;
+    padding: $padding-quarter;
+    @media (min-width: $breakpoint-tablet) {
+      padding: $padding-quarter 0 $padding-quarter $padding-half;
+    }
+    font: $normal 2.0rem/3.2rem $regular;
+    p {
+      display: inline;
+      font: $normal 2.0rem/3.2rem $regular;
+    }
+  }
+  .nf-form-layout, .woocommerce {
+    form {
+      .nf-cell:first-child {
+        padding-right: 20px;
+      }
+      .nf-field-container {
+        margin-bottom: 15px;
+      }
+      .nf-form-fields-required {
+        display: none;
+      }
+      label {
+        font: $normal 1.8rem/2.6rem $regular;
+        @media (min-width: $breakpoint-tablet) {
+          font: $normal 2.0rem/3.4rem $regular;
+        }
+        font-weight: 300 !important;
+        color: $black;
+      }
+      
+      select, input, textarea {
+        font: $normal 1.8rem/2.6rem $regular;
+        @include border-radius(5px);
+        background: transparent;
+        border: 1px solid #adbac8;
+        padding: 10px;
+        &:focus {
+          border: 1px solid $black;
+        }
+      }
+      select {
+        background: url('../img/select_icon.svg') 97% center no-repeat;
+        padding-right: 40px;
+      }
+      input.datepicker {
+        background: url('../img/date_icon.svg') 94% center no-repeat;
+      }
+      .submit-wrap {
+        text-align: left;
+      }
+      .nf-after-field .nf-error-msg {
+        font: $normal 1.6rem/2.2rem $regular;
+      }
+    }
+  }
+}
+
+// Hero
+.overlay {
+  background: #000;
+}
+section.hero {
+  overflow: hidden;
+  position: relative;
+  padding: 0px;
+  .background {
+    transform: scale(1.05);
+    animation: bgZoom 4s;
+    padding: 140px 0px;
+    @media (min-width: $breakpoint-tablet) {
+      padding: 220px 0;
+    }
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+  .content {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h1 {
+      text-align: center;
+      font: $bold 2.6rem/3.2rem $regular;
+      font-size: 2.6rem;
+      line-height: 3.2rem;
+      color: $white;
+      margin-bottom: 0.5em;
+      letter-spacing: 0.2rem;
+      @media (min-width: $breakpoint-tablet) {
+        font: $bold 4.0rem/4.5rem $regular;
+        font-size: 4rem;
+        line-height: 4.5rem;
+      }
+      @media (min-width: $breakpoint-desktop) {
+        font: $bold 4.2rem/5.0rem $regular;
+        font-size: 4.2rem;
+        line-height: 5.0rem;
+        margin-bottom: 0.5em;
+      }
+    }
+    p {
+      text-align: center;
+      font: $normal 2rem/3rem $regular;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: $white;
+      @media (min-width: $breakpoint-tablet) {
+        font: $normal 1.8rem/3rem $regular;
+      }
+    }
+  }
+  &.single {
+    .background {
+      padding: 140px 0px;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pagination {
+  width: 100%;
+  margin-bottom: 20px;
+  clear: both;
+  text-align: center;
+  ul {
+    margin: 0;
+    li {
+      list-style: none;
+      display: inline;
+    }
+  }
+}
+
+table.studies {
+  border: none;
+  @include border-radius(10px);
+  overflow-x: scroll;
+  font: $normal 1.8rem/2.6rem $regular;
+  width:100%;
+  table-layout: auto;
+  border-collapse: separate !important;
+
+  th {
+    color: $green;
+    font: $bold 2.0rem/2.6rem $regular;
+    padding: 20px;
+    border: none;
+    &.study {
+      width:30%;
+    }
+    &.age {
+      width: 50%;
+    }
+    &.link {
+      width: 20%;
+    }
+  }
+  tr {
+    border-bottom: 10px solid $white;
+    td {
+      padding: 20px;
+      border: none;
+      vertical-align: middle;
+      text-align: center;
+      &.study {
+        width: 30%;
+        color: $white;
+        border-bottom: 10px solid #fff;
+        &.co-space {
+          background: #1d9fc2;
+        }
+        &.co-spyce {
+          background: #6464a3;
+        }
+        &.ireland {
+          background: #b95396;
+        }
+        &.iran {
+          background: #d3a72f;
+        }
+        &.denmark {
+          background: #e6456a;
+        }
+        &.us {
+          background: #ff8a00;
+        }
+        &.australia {
+          background: #fbb040;
+        }
+      }
+      &.age {
+        width: 50%;
+        border-bottom: 10px solid #fff;
+      }
+      &.link {
+        width: 20%;
+        border-bottom: 10px solid #fff;
+        a.button {
+          @include border-radius(10px);
+          padding: 15px 20px;
+        }
+        &.co-space {
+          a.button {
+            background: #1d9fc2;
+            color: $white;
+          }
+        }
+        &.co-spyce {
+          a.button {
+            background: #6464a3;
+            color: $white;
+          }
+        }
+        &.ireland {
+          a.button {
+            background: #b95396;
+            color: $white;
+          }
+        }
+        &.iran {
+          a.button {
+            background: #d3a72f;
+            color: $white;
+          }
+        }
+        &.denmark {
+          a.button {
+            background: #e6456a;
+            color: $white;
+          }
+        }
+        &.us {
+          a.button {
+            background: #ff8a00;
+            color: $white;
+          }
+        }
+        &.australia {
+          a.button {
+            background: #fbb040;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Screen Reader
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.skip-to-content-link {
+  left: 50%;
+  position: absolute !important;
+  transform: translateY(-100%);
+  overflow: hidden;
+}
+
+.skip-to-content-link {
+  background: #a7165e;
+  color: $white;
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.skip-to-content-link:focus {
+  transform: translateY(0%);
+}
+
+// WordPress Alignment
+
+img.alignright, .wp-caption.alignright {
+  float:right; margin:0 0 0.8em 0.8em;
+  max-width: 100%;
+  height: auto;
+} 
+img.alignleft, .wp-caption.alignleft { 
+  float:left;
+  margin:0 0.8em 0.8em 0;
+  max-width: 100%;
+  height: auto;
+}
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+} 
+img.alignnone { 
+  max-width: 100%;
+  height: auto;
+}
+.alignright {
+  float:right;
+}
+.alignleft {
+  float:left;
+}
+.aligncenter { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.wp-caption-text {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3px;
+}

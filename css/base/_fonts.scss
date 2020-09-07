@@ -1,0 +1,23 @@
+// Fonts 
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('../fonts/Dosis-Regular.eot');
+    src: url('../fonts/Dosis-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Dosis-Regular.woff2') format('woff2'),
+        url('../fonts/Dosis-Regular.woff') format('woff'),
+        url('../fonts/Dosis-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('../fonts/Dosis-SemiBold.eot');
+    src: url('../fonts/Dosis-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Dosis-SemiBold.woff2') format('woff2'),
+         url('../fonts/Dosis-SemiBold.woff') format('woff'),
+         url('../fonts/Dosis-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}

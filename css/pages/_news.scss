@@ -1,0 +1,52 @@
+// Findings
+
+section.news {
+  padding: $padding-half 0;
+}
+
+article.news_item {
+  margin-bottom: 40px;
+  overflow: hidden;
+  &:nth-child(3n+1) {
+    margin-left: 0;
+    clear: left;
+  }
+  .image {
+    height: 240px;
+    margin-bottom: 20px;
+    position: relative;
+    .content {
+      width: 90%;
+      padding: 5%;
+      
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      h3 {
+        font: $normal 2.6rem/3.2rem $regular;
+        @media (min-width: $breakpoint-tablet) {
+          font: $normal 2.2rem/2.8rem $regular;
+        }
+        @media (min-width: $breakpoint-desktop) {
+          font: $normal 2.6rem/3.2rem $regular;
+        }
+        color: $white;
+        margin-bottom: 0;
+      }
+      span.date {
+        font: $bold 1.4rem/3.2rem $regular;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+    }
+    &:hover {
+      
+      background: $green !important;
+    }
+  }
+  
+  
+}
