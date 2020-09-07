@@ -1,9 +1,9 @@
 {
-  "homepage": "https://github.com/olospo/biocentaur#readme",
+  "homepage": "https://github.com/olospo/osi#readme",
   "name": "WordPress",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olospo/biocentaur.git"
+    "url": "git+https://github.com/olospo/osi.git"
   },
   "optionalDependencies": {},
   "author": "Tom Brooks",

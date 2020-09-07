@@ -42,7 +42,7 @@ $(function(){
 
 var componentVisible = (function ($) {
   
-  var $components = $('section, .grid li, header, .teams h3, .teams article');
+  var $components = $('section');
 
   var componentsWaypoints = $components.waypoint({
     handler: function() {

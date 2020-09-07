@@ -165,47 +165,6 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
-function custom_post_type() {
-  
-  // Services Post Type
-	$labels = array(
-		'name'                => _x( 'Findings', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Finding', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Findings', 'text_domain' ),
-		'all_items'           => __( 'All Findings', 'text_domain' ),
-		'view_item'           => __( 'View Finding', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Finding', 'text_domain' ),
-		'add_new'             => __( 'Add New', 'text_domain' ),
-		'edit_item'           => __( 'Edit Finding', 'text_domain' ),
-		'update_item'         => __( 'Update Finding', 'text_domain' ),
-		'search_items'        => __( 'Search Findings', 'text_domain' ),
-		'not_found'           => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
-	);
-	$args = array(
-		'label'               => __( 'Findings', 'text_domain' ),
-		'description'         => __( 'Findings', 'text_domain' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom fields' ),
-		'hierarchical'        => true,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 20,
-		'menu_icon'           => 'dashicons-groups',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'post',
-		'taxonomies'          => array( 'category', 'post_tag' ),
-	);
-	register_post_type( 'findings', $args );		
-}
-add_action( 'init', 'custom_post_type', 0 );
-
 
 add_action('nav_menu_css_class', 'add_current_nav_class', 10, 2 );
 	
@@ -245,21 +204,6 @@ function is_tree( $pid ) {      // $pid = The ID of the page we're looking for p
 		}
 	}
 	return FALSE;  // we aren't at the page, and the page is not an ancestor
-}
-
-add_action( 'pre_get_posts',  'set_posts_per_page'  );
-function set_posts_per_page( $query ) {
-
-  global $wp_the_query;
-
-  if ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_index() ) ) {
-    $query->set( 'posts_per_page', 9 );
-  }
-  elseif ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_archive() ) ) {
-    $query->set( 'posts_per_page', -1 );
-  }
-
-  return $query;
 }
 
 ?>
