@@ -9,7 +9,7 @@ $youtube = get_field('youtube_url','option');
 <footer>
   <div class="container">
     <div class="copyright eight columns">
-      <strong>&copy; <?php echo date("Y"); ?> University of Oxford Co-Space Study</strong>
+      <strong>&copy; <?php echo date("Y"); ?> OSI</strong>
     </div>
     <div class="social four columns">
       <?php if( $twitter ): ?>

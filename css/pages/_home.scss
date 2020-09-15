@@ -1,83 +1,27 @@
 // What
 
 section.what {
-  @media (min-width: $breakpoint-tablet) {
-    background: url('../img/what_bg_left.svg') left -90px center no-repeat, url('../img/what_bg_right.svg') right -60px center no-repeat;
-    background-color: $green;
-  }
-  @media (min-width: $breakpoint-laptop) {
-    background: url('../img/what_bg_left.svg') left -40px center no-repeat, url('../img/what_bg_right.svg') right -20px center no-repeat;
-    background-color: $green;
-  }
-  @media (min-width: $breakpoint-desktop) {
-    background: url('../img/what_bg_left.svg') left 20px center no-repeat, url('../img/what_bg_right.svg') right 20px center no-repeat;
-    background-color: $green;
-  }
   background-color: $green;
   padding: $padding-half 0;
   color: $white;
-  text-align: center;
   h2 {
-    font-weight: $light;
+    font: $bold 2.8rem/3.8rem $regular;
     color: $white;
-    text-transform: uppercase;
     letter-spacing: 0.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   p {
-    font-weight: $light;
+    font: $light 2.0rem/3.2rem $regular;
   }
 }
 
-section.why {
-  background: $white;
+section.cats {
   padding: $padding-half 0;
-  color: $green;
-  text-align: center;
-  border-bottom: 10px solid #eaeaea;
-  h2 {
-    font-weight: $light;
-    color: $green;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-  }
-  .icon {
-    padding: $padding-half 0;
-    
-    svg, img {
+  .cat_study {
+    text-align: center;
+    img {
+      max-width: 70%;
       margin: 0px auto 20px auto;
-    }
-    p {
-      font: $normal 2.0rem/2.5rem $regular;
-    }
-  }
-}
-
-section.who {
-  background: #f9f9f9;
-  padding: $padding-half 0;
-  h3 {
-    font-weight: $light;
-    color: $black;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-  }
-  p {
-    font: $light 1.8rem/2.5rem $regular;
-  }
-  ul.logos {
-    margin: 20px 0 40px 0;
-    padding: 0;
-    li {
-      margin: 10px;
-      display: inline-block;
-      &:first-child {
-        margin: 10px 10px 10px 0px;
-      }
-      img {
-        height: 80px;
-        width: auto;
-      }
     }
   }
 }

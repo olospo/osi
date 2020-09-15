@@ -23,7 +23,7 @@
     <div class="logo three columns">  
       <p class="site-title">
       <a href="<?php echo get_site_url(); ?>">
-        <img src="<?php bloginfo('template_directory'); ?>/img/co-space-logo.svg" alt="Co-Space Logo" />
+        <img src="<?php bloginfo('template_directory'); ?>/img/logo.jpg" alt="Logo" />
       </a>
       </p>
     </div>
