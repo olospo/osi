@@ -44,17 +44,6 @@
   &:nth-child(12) {transition-delay: 2.4s;}
 }
 
-header {
-  .logo {
-    @include fade();
-  }
-  &.visible {
-    .logo {
-      @include reset-fade();
-    }
-  }
-}
-
 section.hero {
   @include fade();
   h1 {
@@ -79,10 +68,7 @@ section.hero {
 .what, .why, .who {
   @include fade();
   h2, h3 {
-    @include rise();
-  }
-  .icon {
-    @include rise();
+    @include fade();
   }
   &.visible {
     @include reset-fade();
@@ -110,7 +96,6 @@ section.hero {
     }
   }
 }
-
 
 section.post {
   @include fade();

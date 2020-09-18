@@ -1,8 +1,9 @@
 // What
 
 section.what {
-  background-color: $green;
-  padding: $padding-half 0;
+  // border-bottom: 20px solid #342854;
+  background-color: #493972;
+  padding: $padding 0;
   color: $white;
   h2 {
     font: $bold 2.8rem/3.8rem $regular;
@@ -12,6 +13,12 @@ section.what {
   }
   p {
     font: $light 2.0rem/3.2rem $regular;
+  }
+  .intro {
+    
+  }
+  .cta {
+
   }
 }
 
@@ -24,4 +31,8 @@ section.cats {
       margin: 0px auto 20px auto;
     }
   }
+}
+
+section.updates {
+  padding: $padding-half 0;
 }
