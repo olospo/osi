@@ -121,6 +121,11 @@ section {
     .aside_title {
       margin-bottom: 20px;
     }
+    aside {
+      img.cat {
+        max-height: 70px;
+      }
+    }
     .aside_menu {
       background: #f5f5f5;
       border: 1px solid #bdbdbd;

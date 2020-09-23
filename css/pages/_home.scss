@@ -3,10 +3,11 @@
 section.what {
   // border-bottom: 20px solid #342854;
   background-color: #493972;
-  padding: $padding 0;
+  padding: 60px 0;
   color: $white;
+  text-align: center;
   h2 {
-    font: $bold 2.8rem/3.8rem $regular;
+    font: $bold 3.2rem/3.8rem $regular;
     color: $white;
     letter-spacing: 0.2rem;
     margin-bottom: 1rem;
@@ -14,25 +15,38 @@ section.what {
   p {
     font: $light 2.0rem/3.2rem $regular;
   }
-  .intro {
-    
-  }
-  .cta {
-
-  }
 }
 
 section.cats {
   padding: $padding-half 0;
   .cat_study {
     text-align: center;
-    img {
-      max-width: 70%;
+    img.cat {
+      max-height: 100px;
+      margin: 0px auto 10px auto;
+    }
+    img.logo {
+      max-height: 60px;
       margin: 0px auto 20px auto;
     }
   }
 }
 
-section.updates {
+section.funded {
   padding: $padding-half 0;
+  text-align: center;
+  .funding_logos {
+    text-align: center;
+    ul {
+      margin: 0;
+      li {
+        list-style: none;
+        display: inline-block;
+        margin: 10px;
+      }
+    }
+    img {
+      max-height: 70px;
+    }
+  }
 }

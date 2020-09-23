@@ -22,6 +22,7 @@ while ( have_posts() ) : the_post(); ?>
       <?php the_content(); ?>
     </div>
     <aside class="three columns">
+<!--       <img src="<?php bloginfo('template_directory'); ?>/img/<?php echo $parent_slug; ?>_cat.png" alt="<?php echo $parent_slug; ?>" class="cat" /> -->
       <img src="<?php bloginfo('template_directory'); ?>/img/<?php echo $parent_slug; ?>.png" alt="<?php echo $parent_slug; ?>" class="aside_title">
       <div class="aside_menu <?php echo $parent_slug; ?>">
         
