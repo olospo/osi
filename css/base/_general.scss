@@ -93,6 +93,7 @@ h1, h2, h3, h4 {
 // Page 
 section {
   &.page, &.post {
+    position: relative;
     padding: 60px 0px;
     font: $normal 2rem/3.6rem $regular;
     font-size: 2rem;
@@ -122,6 +123,9 @@ section {
       margin-bottom: 20px;
     }
     aside {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 20px;
       img.cat {
         max-height: 70px;
       }
@@ -291,6 +295,17 @@ section {
       }
     }
   }
+  .schema-faq {
+    .schema-faq-section {
+      margin-bottom: 10px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #bdbdbd;
+      strong.schema-faq-question {
+        font: $bold 2.0rem/3.2rem $regular;
+        
+      }
+    }
+  }
   blockquote {
     background: #f7f7f7;
     margin-bottom: 20px;
@@ -305,6 +320,9 @@ section {
       display: inline;
       font: $normal 2.0rem/3.2rem $regular;
     }
+  }
+  figcaption {
+    font: $normal 2.0rem/3.2rem $regular;
   }
   .nf-form-layout, .woocommerce {
     form {
@@ -414,7 +432,7 @@ section.hero {
   }
   &.single {
     .background {
-      padding: 100px 0px;
+      padding: 70px 0px;
     }
     h1 {
       margin-bottom: 0;

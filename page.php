@@ -8,7 +8,7 @@ $parent_slug = $post_data->post_name;
 while ( have_posts() ) : the_post(); ?>
 
 <section class="hero single">
-  <div class="background" style="border-bottom: 30px solid #342854; background: #493972">
+  <div class="background" style="border-bottom: 20px solid #342854; background: #493972">
     <div class="container">
       <div class="content eight columns">
       <h1><?php the_title(); ?></h1>
@@ -38,7 +38,7 @@ while ( have_posts() ) : the_post(); ?>
         <ul>
           <?php wp_list_pages("post_type=page&sort_column=menu_order&title_li=&depth=1&child_of=".$parent); ?>
         </ul>
-        <a href="#" class="button primary">View Study Website</a>
+<!--         <a href="#" class="button primary">View Study Website</a> -->
       </div>
     </aside>
   </div>
