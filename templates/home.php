@@ -7,7 +7,7 @@ while ( have_posts() ) : the_post(); ?>
   <div class="container">
     
     <?php if( have_rows('study') ): ?>
-      <?php while( have_rows('logo') ): the_row(); 
+      <?php while( have_rows('study') ): the_row(); 
         // Fields
         $cat = get_sub_field('cat_image');
         $studyLogo = get_sub_field('study_logo');
@@ -23,26 +23,7 @@ while ( have_posts() ) : the_post(); ?>
       </div>
       <?php endwhile; ?>
     <?php endif; ?>
-    
-    
-    <div class="cat_study one-third column">
-      <img src="<?php bloginfo('template_directory'); ?>/img/icats_cat.png" alt="iCats Cat" class="cat" />
-      <img src="<?php bloginfo('template_directory'); ?>/img/icats.png" alt="iCats" class="logo" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a href="<?php echo get_site_url(); ?>/icats" class="button primary">Find out more</a>
-    </div>
-    <div class="cat_study one-third column">
-      <img src="<?php bloginfo('template_directory'); ?>/img/my-cats_cat.png" alt="My-Cats Cat" class="cat" />
-      <img src="<?php bloginfo('template_directory'); ?>/img/my-cats.png" alt="My-Cats" class="logo" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a href="<?php echo get_site_url(); ?>/my-cats" class="button primary">Find out more</a>
-    </div>
-    <div class="cat_study one-third column">
-      <img src="<?php bloginfo('template_directory'); ?>/img/co-cat_cat.png" alt="Co-Cats Cat"  class="cat" />
-      <img src="<?php bloginfo('template_directory'); ?>/img/co-cat.png" alt="Co-Cat" class="logo" />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a href="<?php echo get_site_url(); ?>/co-cat" class="button primary">Find out more</a>
-    </div>
+
   </div>
 </section>
 
