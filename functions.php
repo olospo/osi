@@ -206,4 +206,23 @@ function is_tree( $pid ) {      // $pid = The ID of the page we're looking for p
 	return FALSE;  // we aren't at the page, and the page is not an ancestor
 }
 
+  
+// ACF Blocks
+add_action('acf/init', 'my_acf_blocks_init');
+function my_acf_blocks_init() {
+
+  // Check function exists.
+  if( function_exists('acf_register_block_type') ) {
+    acf_register_block_type(array(
+        'name'              => 'button',
+        'title'             => __('Content Button'),
+        'description'       => __('A button to place in the content.'),
+        'render_template'   => 'inc/block/button.php',
+        'enqueue_style'     => get_template_directory_uri() . '/css/blocks/blocks.css',
+        'icon'              => 'media-code',
+        'keywords'          => array( 'button', 'link' ),
+    ));
+  }
+}
+
 ?>

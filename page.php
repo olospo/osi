@@ -10,7 +10,7 @@ while ( have_posts() ) : the_post(); ?>
 <section class="hero single">
   <div class="background" style="border-bottom: 20px solid #342854; background: #493972">
     <div class="container">
-      <div class="content eight columns">
+      <div class="content ten columns">
       <h1><?php the_title(); ?></h1>
       </div>
     </div>
