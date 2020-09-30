@@ -82,21 +82,6 @@ section.hero {
   }
 }
 
-.teams {
-  h3 {
-    @include rise();
-    &.visible {
-      @include reset();
-    }
-  }
-  article {
-    @include fade();
-    &.visible {
-      @include reset();
-    }
-  }
-}
-
 section.post {
   @include fade();
   &.visible {

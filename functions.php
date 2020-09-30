@@ -215,12 +215,21 @@ function my_acf_blocks_init() {
   if( function_exists('acf_register_block_type') ) {
     acf_register_block_type(array(
         'name'              => 'button',
-        'title'             => __('Content Button'),
+        'title'             => __('Button'),
         'description'       => __('A button to place in the content.'),
         'render_template'   => 'inc/block/button.php',
-        'enqueue_style'     => get_template_directory_uri() . '/css/blocks/blocks.css',
+        'enqueue_style'     => get_template_directory_uri() . '/css/main.css',
         'icon'              => 'media-code',
         'keywords'          => array( 'button', 'link' ),
+    ));
+    acf_register_block_type(array(
+        'name'              => 'profile',
+        'title'             => __('Profile'),
+        'description'       => __('Add in team profile'),
+        'render_template'   => 'inc/block/profile.php',
+        'enqueue_style'     => get_template_directory_uri() . '/css/main.css',
+        'icon'              => 'admin-users',
+        'keywords'          => array( 'profile', 'team' ),
     ));
   }
 }

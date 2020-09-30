@@ -1,15 +1,6 @@
 // About
 
 .teams {
-  h3 {
-    clear: both;
-    margin: 80px 0px 40px 0px;
-    font: $light 3.0rem/3.8rem $regular;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    border-bottom: 5px solid $green;
-    color: $green;
-  }
   article {
     margin-bottom: 40px;
     font: $light 2.0rem/2.8rem $regular;
@@ -25,7 +16,7 @@
       max-width: 260px;
       text-align: center;
       color: $white;
-      background: $green;
+      background: $pink;
       padding: 10px 20px;
       strong {
         display: block;

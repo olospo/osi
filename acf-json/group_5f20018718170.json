@@ -60,11 +60,11 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "20",
+                                "width": "100",
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "id",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -84,7 +84,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "40",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -103,7 +103,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "40",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -112,22 +112,6 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
-                        },
-                        {
-                            "key": "field_5f49021d34aaa",
-                            "label": "Link",
-                            "name": "link",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -142,9 +126,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "block",
                 "operator": "==",
-                "value": "templates\/about.php"
+                "value": "acf\/profile"
             }
         ]
     ],
@@ -156,5 +140,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1598621510
+    "modified": 1601464819
 }
