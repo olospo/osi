@@ -22,10 +22,19 @@ while ( have_posts() ) : the_post(); ?>
       <?php the_content(); ?>
     </div>
     <aside class="three columns">
-<!--       <img src="<?php bloginfo('template_directory'); ?>/img/<?php echo $parent_slug; ?>_cat.png" alt="<?php echo $parent_slug; ?>" class="cat" /> -->
-      <img src="<?php bloginfo('template_directory'); ?>/img/<?php echo $parent_slug; ?>.png" alt="<?php echo $parent_slug; ?>" class="aside_title">
+      
+      <?php if (is_tree(73)) { // Co-Cat ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/co-cat.png" alt="Co-CAT" class="aside_title">
+      <?php } elseif (is_tree(69)) { // iCATS ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/icats.png" alt="iCATs" class="aside_title">
+      <?php } elseif (is_tree(71)) { // MY-CATS ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/my-cats.png" alt="MY-CATS" class="aside_title">
+      <?php } elseif (is_tree(59)) { // OSI / About ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/osi.png" alt="OSI" class="aside_title">
+      <?php } ?>
+
       <div class="aside_menu <?php echo $parent_slug; ?>">
-        
+
         <?php
           if ($post->post_parent)	{
           	$ancestors=get_post_ancestors($post->ID);
@@ -36,9 +45,8 @@ while ( have_posts() ) : the_post(); ?>
           } 
         ?>
         <ul>
-          <?php wp_list_pages("post_type=page&sort_column=menu_order&title_li=&depth=1&child_of=".$parent); ?>
+          <?php wp_list_pages("post_type=page&sort_column=menu_order&title_li=&depth=2&child_of=".$parent); ?>
         </ul>
-<!--         <a href="#" class="button primary">View Study Website</a> -->
       </div>
     </aside>
   </div>

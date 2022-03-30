@@ -4,5 +4,10 @@
 * Author: Tom Brooks
 * Author URI: https://olopso.co.uk
 * Description: WordPress Theme for OSI
-* Version: 0.3
+* Version: 0.4
 */
+
+section.post .aside_menu ul li.current_page_item ul li a {
+  text-decoration: underline !important;
+  font-weight: normal !important;
+}
