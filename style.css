@@ -11,3 +11,7 @@ section.post .aside_menu ul li.current_page_item ul li a {
   text-decoration: underline !important;
   font-weight: normal !important;
 }
+
+section.cats .cat_study img.logo {
+  max-height: 50px;
+}

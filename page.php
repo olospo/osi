@@ -31,6 +31,8 @@ while ( have_posts() ) : the_post(); ?>
         <img src="<?php bloginfo('template_directory'); ?>/img/my-cats.png" alt="MY-CATS" class="aside_title">
       <?php } elseif (is_tree(59)) { // OSI / About ?>
         <img src="<?php bloginfo('template_directory'); ?>/img/osi.png" alt="OSI" class="aside_title">
+      <?php } elseif (is_tree(2404)) { // OSI Grows ?>
+        <img src="<?php bloginfo('template_directory'); ?>/img/osi_grows.jpg" alt="OSI Grows" class="aside_title">
       <?php } ?>
 
       <div class="aside_menu <?php echo $parent_slug; ?>">
