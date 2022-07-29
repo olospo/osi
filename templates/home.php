@@ -15,7 +15,7 @@ while ( have_posts() ) : the_post(); ?>
         $studyButtonText = get_sub_field('study_button_text');
         $studyButtonLink = get_sub_field('study_button_link');
       ?>
-      <div class="cat_study one-third column">
+      <div class="cat_study three columns">
         <img src="<?php echo esc_url($cat['url']); ?>" alt="<?php echo esc_attr($cat['alt']); ?>" class="cat" />
         <img src="<?php echo esc_url($studyLogo['url']); ?>" alt="<?php echo esc_attr($studyLogo['alt']); ?>" class="logo" />
         <?php echo $studyText; ?>
