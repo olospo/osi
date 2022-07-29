@@ -44,17 +44,7 @@ function my_deregister_scripts() {
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );
 
-// Update Checker
-require 'plugin-update-checker/plugin-update-checker.php';
-	$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/olospo/co-space',
-    __FILE__
-);
-
-$myUpdateChecker->setBranch('master');
-
 // Options Page
-
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
